@@ -3,7 +3,7 @@ const Tasks = require("../models/tasks")
 
 const router = express.Router()
 
-// Retrieves list of projects
+// Retrieves list of tasks
 router.get("/", async (req, res, next) => {
     try {
         const tasks = await Tasks.find()
@@ -14,6 +14,7 @@ router.get("/", async (req, res, next) => {
     }
 })
 
+// Posts new task(s)
 router.post("/", async (req, res, next) => {
     try {
         const newTask = req.body

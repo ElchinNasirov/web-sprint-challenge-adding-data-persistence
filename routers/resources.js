@@ -14,6 +14,7 @@ router.get("/", async (req, res, next) => {
     }
 })
 
+// Posts new resource(s)
 router.post("/", async (req, res, next) => {
     try {
         const newResource = req.body
